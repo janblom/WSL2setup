@@ -1,7 +1,7 @@
 # WSL2setup
 
 This script allows you to quickly get up and running with WSL2 on Windows 10 Build 2004.
-This script allows allows for easy install of various Linux distros.
+This script allows allows for easy installation of various Linux distros.
 
 ## Quickstart
 
@@ -12,8 +12,9 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercon
 ```
 
 You will have to run this one-liner twice.
-* Once to install Windows pre-requisites (this needs to be run with admin rights)
-* Once after the computer re-boots to update the WSL2 kernel and install a WSL distro (Ubuntu 20.04 recommended, and do not run this step with admin rights)
+* Run the script once to install Windows pre-requisites and let your computer reboot 
+* Follow the instructions of step 4 on this page: https://aka.ms/wsl2kernel (download AND install)
+* Once after the computer re-boots to update the WSL2 kernel and install a WSL distro (Ubuntu 20.04 recommended)
 
 ## Prerequisites
 
