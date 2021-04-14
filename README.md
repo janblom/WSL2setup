@@ -12,8 +12,8 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JtJeS'))
 ```
 
 You will have to run this one-liner twice.
-* Once to install Windows pre-requisites
-* Once after the computer re-boots to update the WSL2 kernel and install a WSL distro (Ubuntu 18.04 recommended)
+* Once to install Windows pre-requisites (this needs to be run with admin rights)
+* Once after the computer re-boots to update the WSL2 kernel and install a WSL distro (Ubuntu 20.04 recommended, and do not run this step with admin rights)
 
 ## Prerequisites
 
