@@ -209,7 +209,7 @@ function Install-Distro ($distro) {
         $distroinstall = "$env:LOCALAPPDATA\lxss"
         $wslname = $($distro.Name).Replace(" ", "-")
         $Filename = $wslname + ".rootfs.tar.gz"
-        Write-Host(" ...Downloading " + $distro.Name + ".")
+        Write-Host(" ...Downloading " + $distro.Name + "from " + $distro.URI + ".")
         Invoke-WebRequest -Uri $distro.URI -OutFile $Filename -UseBasicParsing
         wsl.exe --import $wslname $distroinstall $Filename
     }
@@ -217,10 +217,10 @@ function Install-Distro ($distro) {
         # ToDo: Check if sideloading is required
         $Filename = "$($distro.AppxName).appx"
         $ProgressPreference = 'SilentlyContinue'
-        Write-Host(" ...Downloading " + $distro.Name + ".")
         if ($distro.URI.Length -lt 2) {
             $distro = Get-StoreDownloadLink($distro) # Handle dynamic URIs
         }
+        Write-Host(" ...Downloading " + $distro.Name + "from " + $distro.URI + ".")
         Invoke-WebRequest -Uri $distro.URI -OutFile $Filename -UseBasicParsing
         Write-Host(" ...Beginning " + $distro.Name + " install.")
         Add-AppxPackage -Path $Filename
