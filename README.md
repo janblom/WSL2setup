@@ -8,7 +8,7 @@ This script allows allows for easy install of various Linux distros.
 To quickly get up and running with WSL2, open a new PowerShell window as "Admin" and run the following one-liner:
 
 ```posh
-iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JtJeS'))
+iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/janblom/WSL2setup/master/WSL2_Install.ps1'))
 ```
 
 You will have to run this one-liner twice.
